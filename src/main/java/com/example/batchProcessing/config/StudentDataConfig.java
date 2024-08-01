@@ -9,11 +9,17 @@ public class StudentDataConfig implements ItemProcessor<Student,Student>   {
     @Override
     public Student process(Student item) throws Exception{
 
-                if(item.getMarks() >= 650){
-                    item.setResult_prediction("May get decent college");
+                if(item.getMarks() >= 710){
+                    item.setResult_prediction("May get AIIMS Delhi");
 
                 }
-                else {
+                else if(item.getMarks() >= 690 && item.getMarks() <710){
+                    item.setResult_prediction("May get a lower AIIMS");
+                }
+                else if (item.getMarks() >= 650 && item.getMarks() <690) {
+                    item.setResult_prediction("May get a good private collge");
+                }
+                else{
                     item.setResult_prediction("Might get a good college");
                 }
 
