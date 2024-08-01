@@ -13,10 +13,10 @@ public class StudentDataConfig implements ItemProcessor<Student,Student>   {
                     item.setResult_prediction("May get AIIMS Delhi");
 
                 }
-                else if(item.getMarks() >= 690 && item.getMarks() <710){
+                else if(item.getMarks() >= 690){
                     item.setResult_prediction("May get a lower AIIMS");
                 }
-                else if (item.getMarks() >= 650 && item.getMarks() <690) {
+                else if (item.getMarks() >= 650){
                     item.setResult_prediction("May get a good private collge");
                 }
                 else{
